@@ -49,7 +49,7 @@ export default function Home({ sdatas }) {
       <div className="container">
         <h1>Supplier </h1>
         <p style={{ margin: '0.4rem' }}>
-          <Link href="/sdatas/add">+ New Supplier</Link>
+          <Link href="/sdatas/add">+ Add Supplier</Link>
         </p>
         <table>
           <thead>

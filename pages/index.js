@@ -28,7 +28,7 @@ export default function Home() {
       <div>
         <LoginButton />
       </div>
-      <p>This is a sample page for Chayapol.</p>
+      <p>This is sipplier page choice.</p>
 
       <div>
         <Link href="/about" passHref>
