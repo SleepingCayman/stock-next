@@ -81,7 +81,7 @@ export default function Sdata({ sdata }) {
 // STEP 1: This function will be executed at the server before loading the page.
 export async function getServerSideProps({ params }) {
   console.debug('params', params)
-  const res = await fetch(`https://stock-final-6328420.vercel.app/api/sdatas/suppliers/${params.id}`)
+  const res = await fetch(`https://stock-next-kappa.vercel.app/api/sdatas/suppliers/${params.id}`)
   const sdata = await res.json()
   console.debug('sdata 1', sdata)
   return { props: { sdata } }
