@@ -28,7 +28,7 @@ export default function Home() {
       <div>
         <LoginButton />
       </div>
-      <p>This is sipplier page choice.</p>
+      <p>This is supplier page choice.</p>
 
       <div>
         <Link href="/about" passHref>

@@ -116,7 +116,7 @@ export default function Home({ sdatas }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('https://stock-next-kappa.vercel.app/api/sdatas/suppliers/');
+  const res = await fetch('https://stock-final-6328420.vercel.app/api/sdatas/suppliers/');
   const sdatas = await res.json();
   return { props: { sdatas } };
 }
