@@ -27,7 +27,7 @@ export default function Sdata({ sdata }) {
   // STEP 1: This function will be executed at the server before loading the page.
   export async function getServerSideProps({ params }) {
     console.debug('params', params)
-    const res = await fetch(`mongodb+srv://user1:qqqqq123@cluster0.gkl5jni.mongodb.net/sdatas/${params.id}`)
+    const res = await fetch(`http://localhost:3000/api/sdatas/suppliers/${params.id}`)
     const sdata = await res.json()
     console.debug('sdata 1', sdata)
     return { props: { sdata } }

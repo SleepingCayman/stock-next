@@ -1,16 +1,16 @@
-import {connect, model, models, Schema} from "mongoose"
-const connectionString ='mongodb+srv://user1:qqqqq123@cluster0.gkl5jni.mongodb.net/sdatas'
+import dbConnect from "@/lib/dbConnect"
+import Supplier from "@/models/Supplier"
 
 export default async function handler(req, res) {
-    await connect(connectionString);
+    await dbConnect()
     console.log("req.method: ", req.method)
 
     if (req.method === 'GET') {
         const docs = await Supplier.find()
         res.status(200).json(docs)
     } else if (req.method === 'POST') {
-        console.log(req.body)
-        //res.status(200).json(req.body)
+        // console.log(typeof(req.body))
+        console.log("POST",req.body)
         const doc = await Supplier.create(req.body)
         res.status(201).json(doc)
     } else {
@@ -18,16 +18,5 @@ export default async function handler(req, res) {
         res.status(405).end(`Method ${req.method} Not Allowed`)
     }
 }
-
-
-
-const supplierSchema = new Schema({
-    supplier: String,
-    address: String,
-    phone: Number,
-});
-
-console.log("Mongoose Models", models)
-const Supplier = models?.supplier || model('supplier', supplierSchema);
 
 
