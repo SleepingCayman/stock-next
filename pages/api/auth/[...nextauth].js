@@ -1,4 +1,4 @@
-import NextAuth from "next-auth"
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 export const authOptions = {
@@ -34,8 +34,8 @@ export const authOptions = {
       }
     })
   ],
-  // Add a secret to protect JWTs and other important data in production
-  secret: process.env.NEXTAUTH_SECRET
-}
+  // Add a secret to protect JWTs and other important data
+  secret: "ijdajdpaw"
+};
 
-export default NextAuth(authOptions)
+export default NextAuth(authOptions);
