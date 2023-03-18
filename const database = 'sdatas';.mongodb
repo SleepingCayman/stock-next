@@ -1,0 +1,11 @@
+const database = 'sdatas';
+const collection = 'suppliers';
+
+use(database);
+
+db.suppliers.insert({
+    supplier: 'Automotive Industry',
+    address: 'Bosch, Gerlingen-Schillerhöhe, Germany.',
+    phone:'408-996-1010'
+    
+})
