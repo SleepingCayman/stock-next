@@ -29,7 +29,7 @@ export default async function handler(req, res) {
 
 
 const supplierSchema = new Schema({
-    code: String,
+    supplier: String,
     name: String,
     price: Number,
 });
